@@ -110,7 +110,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>C:\jcordovaech\Libraries\boost_1_68_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\jcordovaech\Libraries\googletest\googletest\include;C:\jcordovaech\Libraries\googletest\googletest\src;C:\jcordovaech\Libraries\boost_1_68_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -159,6 +159,7 @@
   <ItemGroup>
     <ClInclude Include="ipc_producer.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="testing_producer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ipc_producer.cpp" />
@@ -168,6 +169,11 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HaptionDLL\HaptionDLL.vcxproj">
+      <Project>{c3b93bda-6228-4738-8320-5b5c0a99080b}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
